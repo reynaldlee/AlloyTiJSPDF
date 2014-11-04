@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="com-appcelerator-apm-id" type="string">54587f44100b2577ac00003a</property>
+    <property name="acs-api-key-production" type="string">XF9ntLvl9iFdJtIzNy3mN8oWU2ziIF2V</property>
+    <property name="acs-authbase-url" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-api-key-development" type="string">YmrItYsTDNVpo3jO7cmLFBepQobhrJXp</property>
+    <id>id.evo.pdfcreator</id>
+    <name>pdfCreator</name>
+    <version>1.0</version>
+    <publisher>reynaldliandra</publisher>
+    <url>http://</url>
+    <description>undefined</description>
+    <copyright>2014 by reynaldliandra</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>45134866-680e-4e85-83a6-c4b3b3dbef94</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+                <key>CFBundleURLTypes</key>
+                <array>
+                    <dict>
+                        <key>CFBundleTypeRole</key>
+                        <string>Editor</string>
+                        <key>CFBundleURLName</key>
+                        <string>id.evo.pdfcreator</string>
+                        <key>CFBundleURLSchemes</key>
+                        <array>
+                            <string>touchtest-c17b8ae7-7fbb-446a-b5d5-8ac4d1831c84</string>
+                        </array>
+                    </dict>
+                </array>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest>
+            <application>
+                <activity
+                    android:configChanges="keyboardHidden|orientation"
+                    android:label="pdfCreator"
+                    android:name=".PdfcreatorActivity" android:theme="@style/Theme.Titanium">
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN"/>
+                        <category android:name="android.intent.category.LAUNCHER"/>
+                    </intent-filter>
+                    <intent-filter>
+                        <data android:scheme="touchtest-c17b8ae7-7fbb-446a-b5d5-8ac4d1831c84"/>
+                        <action android:name="android.intent.action.VIEW"/>
+                        <category android:name="android.intent.category.BROWSABLE"/>
+                        <category android:name="android.intent.category.DEFAULT"/>
+                    </intent-filter>
+                </activity>
+                <service android:enabled="true" android:exported="false" android:name="com.soasta.android.touchtest.TouchTestService"/>
+            </application>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.BLUETOOTH"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+            <uses-permission android:name="android.permission.GET_TASKS"/>
+        </manifest>
+    </android>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="android">com.appcelerator.apm</module>
+        <module deploy-type="test" platform="android" version="1.0">com.soasta.touchtest</module>
+        <module deploy-type="test" platform="iphone" version="1.0">com.soasta.touchtest</module>
+        <module platform="commonjs">ti.cloud</module>
+        <module platform="iphone">com.appcelerator.apm</module>
+        <module deploy-type="development" platform="iphone" version="1.0">com.soasta.touchtest</module>
+        <module deploy-type="development" platform="android" version="1.0">com.soasta.touchtest</module>
+    </modules>
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+        <target device="mobileweb">true</target>
+    </deployment-targets>
+    <sdk-version>3.4.0.GA</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+        <plugin>com.soasta.touchtest.android</plugin>
+    </plugins>
+    <property name="com-soasta-touchtest-version" type="string">7419.118</property>
+    <property name="com-soasta-touchtest-ios-appId" type="string">304509</property>
+</ti:app>
